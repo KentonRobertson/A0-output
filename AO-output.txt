@@ -1,0 +1,154 @@
+Output of the commands practiced:
+
+1a. man ls
+1b. This lists the manual for the specific command and what it can do.
+
+2a. ls
+2b. Output is the list of everything that a certain folder contains.
+
+3a. cd
+3b. This allows you to see what is inside a specific folder, and combined with ls, can see what is in every folder on your computer.
+
+4a. pwd
+4b. This allows you to see which folder you are in, in case you forgot where you were.
+
+5a. mkdir
+5b. This allows you to create new folders, along with the name of the folder you want to make.
+
+6a. rmdir
+6b. This allows you to delete a folder.
+
+7a. mv
+7b. This allows you to move files around.
+
+8a. cp
+8b. This allows you to copy files, and also folders with the -r addition in cp.
+
+9a. open
+9b. This allows you to open files that are within a folder.
+
+10a. touch
+10b. This allows you to create an empty file.
+
+11a. find
+11b. This allows you to find folders and files with this line of code: find . -name '*.js'
+
+12a. ln
+12b. This allows you to create both Hard Links, which lets the link be updated if the file that is linked is editied, and Soft Links, which can link to other filesystems and to directories, but will be broken if the original link is broken. The code is: ln <original> <link> for Hard, and ln -s <original> <link> for Soft.
+
+13a. gzip
+13b. This allows you to compress a file with the following code: gzip filename
+
+14a. gunzip
+14b. This is pratically the same as gzip, just with the difference of that it will remove the .gz extension from the file. The code is: ginzip filename.gz
+
+15a. tar
+15b. This allows you to archive/group multiple files in a single file. The code to archive is: (tar -f archive.tar file1 file 2) and the code to extract is: (tar -xf archive.tar) & (tar -xf archive.tar -C directory)
+
+16a. alias
+16b. This allows you to have a more detailed view of the code (ls). The code is: ls -al
+
+17a. cat
+17b. This allows you to add content to a file. The full code list is: (cat file, cat file1 file2, cat file1 file2 > file 3 (which lets you concatenate the content of multiple files into a new file), cat file1 file 2 >> file 3 (which lets you append the content of multiple files into a new file), and cat -n file1 (which lets you print cat with -n)).
+
+18a. less
+18b. This allows you to see the contents inside a file. The code is: less <filename>
+
+19a. tail
+19b. This code opens the file you want at the end, and also watches for changes. The code is: tail -f /var/log/system.log
+
+20a. wc
+20b. This allows you to see some useful information about a file or input it receives via pipes: The code is: (echo test >> test.txt)(wc test.txt)
+
+21a. grep
+21b. This allows you to search in files, or combine it with pipes to filter the output of another command. The full code list is: (grep -n document.getElementByID index.md)(grep -nc 2 document.getElementById index.md)
+
+22a. sort
+22b. This allows you to sort a list if a file has a list of items. The code is: ls | sort
+
+23a. uniq
+23b. This allows us to sort lines of text. The code is: (uniq dogs.txt) (ls | uniq), which variations like (sort dogs.txt | uniq, -d at the end of previous code, -u, and -c)
+
+24a. diff
+24b. This allows you to make a difference between 2 different files. The code is: diff dogs.txt moredogs.txt, or the other way around, which will result in < Vanille and > Vanille below it respectively. You can also use -y to compare two files line by line, -u, which displays the difference between versions, -r, which lets you compare directories recursively.
+
+25a. echo
+25b. This allows you to print a statement. The following code is: echo "hello", echo *, which lets us print the following files in the current folder, echo ~, which lets us print your home folder path, echo $(ls -al), which lets you print the results of an executed command to the standard output, echo {1..5}, which lets us generate a list of strings.
+
+26a. chown
+26b. This allows us to change the owner to another user. The following codes are: chown <owner> <file>, chown -R <owner> <file>, which lets us change the ownership of a directory, chown <owner>:<group> <file>, which lets us change ownership of the owner and the groups along with it, and chgrp <group> <filename>, which allows us to change the group of a file.
+
+27a. umask
+27b. This allows us to control and modify permissions for a file. The following codes are: umask -S, which lets us see a human-readable notation, umask 002, which lets you set a new value for the mask, and umask g+r, which lets us change a specific role's permission.
+
+28a. du
+28b. This allows us to calculate the size of a directory as a whole. The following codes are: du, du *, which calculates the size of each file individually, du -m or du -g, which displays the values in Megabytes and Gigabytes respectively, du -a, which prints the size of each file in the directories, du -h <directory> | sort -nr, which lets us sort the directories by size.
+
+29a. df
+29b. This allows us to get disk usage information. The following codes are: df -h, which shows these alues in a human-readable format.
+
+30a. basename
+30b. This allows us to see the last segment of the path. The following codes are: basename /Users/flavio/, which prints flavio.
+
+31a. dirname
+31b. This allows us to see the full path. The following code is: dirname /Users/flavio/test.txt, which outputs /Users/flavio
+
+32a. ps
+32b. This allows us to see all the currently running processes. The following codes are: ps, ps ax, which lets us see all other users' processes and all processes not linked to any terminal, and ps axww, which lets you continue the command listing on a new line instead of cutting it.
+
+33a. top
+33b. This allows us to display dynamic real-time info. about running processes in a system. The following codes are: top, and top -o mem, which lets you sort processes by memory utilized.
+
+34a. kill
+34b. This allows us to mainly terminate a program. The following codes are: kill <PID>, which sends the kill signal to the process id specified, with multiple alterations to this, like -HUP, which lets you hang up a program, -INT, which interrupts a program, -KILL, which is sent to the operating system kernel to stop and terminate the process, -TERM, which is basically kill, -CONT, which means continue, and -STOP, which is sent to the operating system kernel to stop, but not kill, the process.
+
+35a. killall
+35b. This allows us to send the kill signal to multiple processes at once. The following codes are: killall <name>, where name is the name of the program, and killall -HUP top, which lets us specify the signal, which includes all the above alterations.
+
+36a. jobs
+36b. This allows us to see all job instances at that point. The following code is: jobs, which displays the following job instances.
+
+37a. bg
+37b. This allows us to resume an execution of a command in the background. The following codes are: bg 1, which lets us resume an exectution of job #1 in the background, so knowledge of the job command is needed for this command to work.
+
+38a. fg
+38b. This is almost the same as the bg command, but it allows us to resume an execution of a command in the foreground rather than the background. The following code is fg, and fg 2, which lets us resume job #2.
+
+39a. type
+39b. This allows us to see how the following command will be interpreted, which is dependent on the shell that is used.
+
+40a. which
+40b. This allows us to see what shell the command will execute in.
+
+41a. nohup
+41b. This allows us to continue to run a command, even after you log out or close the session to a server. The following code is: nohup <command>
+
+42a. xargs
+42b. This allows us to convert input from standard input into arguments to a command. The following code is: command 1 | xargs command 2, cat todelete.txt | xargs rm, which lets us remove certain files inside a directory, cat todelete.txt | xargs -p rm, which lets us print a confirmation prompt, cat todelete.txt | xargs -n, which lets us perform one iteration at a time, cat todelete.txt | xargs -p, which lets us individually confirm them, and cat todelete.txt | xargs -I, which lets us get the output into a placeholder, and then you can do multiple things with it, like being able to run multiple commands (command 1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
+
+43a. vim 
+43b. This is basically a file editor. The following codes to enter this editor are: vi, vi test.txt, which lets us specify a filename at invocation time to edit that specific file, and i, whcih gets you inter insert mode of the editor. 
+
+44a. emacs
+44b. This is another editor. The following codes are: emacs, which enters the editor, and emacs <filename>, which lets you edit an existing file
+
+45a. nano
+45b. This is another editor, but this one is beginner friendly. The following code is: nano <filename>, which lets you get into the editor to edit.
+
+46a. whoami
+46b. This allows us to print the user name that is currently logged in to the session.
+
+47 who
+47b. This is similar to the whoami command above, but it shows all the users logged in to the system. You can use the command who -aH to display more information about the user, like idle time and the process ID of the terminal, and the who am i command is used to list the curernt terminal session details.
+
+48a. su
+48b. This allows us to switch to another user, so if we put in su <username>, then it will change to that user, but you have to enter the password for that user before you can become that user.
+
+49a. sudo
+49b. This allows us to run a command as a root. To use sudo, you must first enable it, then you can do a multitude of things, like edit a system configuration file (sudo nano /ets/hosts). You can also run (sudo -i) to staqrt a shell as root, and also use sudo to run commands as any user you wish with the following command (sudo -u flavio ls /Users/flavio).
+
+50a. clear
+50b. This just clears the screen full of code.
+
+51a. passwd
+51b. This allows us to change the password that we are given. The following commands are: passwd, which is used in case you want to change your password, and passwd <username> <new password>, which lets us change the password for any user in the system.
